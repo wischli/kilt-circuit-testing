@@ -11,6 +11,8 @@ This is a testing repository to come up with a circuit for a minified KILT crede
 - [Circuit in circomlib example](https://github.com/DalaiLlaama/snappframes/tree/master/circuits)
 - [Circomlib Js SMT](https://github.com/iden3/circomlib/blob/master/src/smt.js)
 - [Circomlib SMT circom files](https://github.com/iden3/circomlib/tree/master/circuits/smt)
+- [Circom](https://github.com/iden3/circom)
+- [Circom + Snarkjs Tutorial](https://github.com/iden3/circom/blob/master/TUTORIAL.md)
 
 ## Minified credential
 
