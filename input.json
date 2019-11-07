@@ -1,0 +1,8 @@
+{
+  "name": "Alice",
+  "age": 29,
+  "claimerHash": "0xc6a30fbe790804a28390fedf7429ad96e895e66c7ea7691d674edaaf0f80d8ee",
+  "claimerSignature": "0x97e941d9211b91726362282b4bbee528ab1340842ccd44b083dc732a6a8b44cc8813c0a2dd72dafd39b68ada5d7ec92b99190a8e5e1ed7750d7f4c73f35d0f0f",
+  "attester": "5Cf2axfXbRKsNBDXuha7hTNi561BNxKM1A7B33xhY1qhR6Hz",
+  "attestationHash": "0x4adf483a788c691947405f71f8ca45664f586b23decbd6fc5ca75dc8fc36a67e"
+}

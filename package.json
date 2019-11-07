@@ -1,0 +1,22 @@
+{
+  "name": "kilt-circuit-testing",
+  "version": "1.0.0",
+  "description": "This is a testing repository to come up with a circuit for a minified KILT credential. As Merkle trees look promising, we will start with such.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wischli/kilt-circuit-testing.git"
+  },
+  "author": "William Freudenberger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wischli/kilt-circuit-testing/issues"
+  },
+  "homepage": "https://github.com/wischli/kilt-circuit-testing#readme",
+  "dependencies": {
+    "circomlib": "0.0.19"
+  }
+}
