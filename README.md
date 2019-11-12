@@ -8,6 +8,7 @@ This is a testing repository to come up with a circuit for a minified KILT crede
 - [ ] Extend circuit for more attribute inputs and compare file sizes
 
 ## Resources
+- [Devcon Workshop for zkRollup using Merkle trees with circom and snarkjs](https://keen-noyce-c29dfa.netlify.com/#0)
 - [Circuit in circomlib example](https://github.com/DalaiLlaama/snappframes/tree/master/circuits)
 - [Circomlib Js SMT](https://github.com/iden3/circomlib/blob/master/src/smt.js)
 - [Circomlib SMT circom files](https://github.com/iden3/circomlib/tree/master/circuits/smt)
