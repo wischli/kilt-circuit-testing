@@ -14,6 +14,8 @@ This is a testing repository to come up with a circuit for a minified KILT crede
 - [Circomlib SMT circom files](https://github.com/iden3/circomlib/tree/master/circuits/smt)
 - [Circom](https://github.com/iden3/circom)
 - [Circom + Snarkjs Tutorial](https://github.com/iden3/circom/blob/master/TUTORIAL.md)
+- [Quadratic Arithmetic Programs from Zero to hero](https://medium.com/@VitalikButerin/quadratic-arithmetic-programs-from-zero-to-hero-f6d558cea649)
+- [Poseidon hash function](https://eprint.iacr.org/2019/458.pdf)
 
 ## Minified credential
 
