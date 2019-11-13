@@ -1,23 +1,28 @@
 {
-  "name": "kilt-circuit-testing",
-  "version": "1.0.0",
-  "description": "This is a testing repository to come up with a circuit for a minified KILT credential. As Merkle trees look promising, we will start with such.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wischli/kilt-circuit-testing.git"
-  },
-  "author": "William Freudenberger",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/wischli/kilt-circuit-testing/issues"
-  },
-  "homepage": "https://github.com/wischli/kilt-circuit-testing#readme",
-  "dependencies": {
-    "circomlib": "0.0.19",
-    "fs": "0.0.1-security"
-  }
+    "name": "kilt-circuit-testing",
+    "version": "1.0.0",
+    "description": "This is a testing repository to come up with a circuit for a minified KILT credential. As Merkle trees look promising, we will start with such.",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/wischli/kilt-circuit-testing.git"
+    },
+    "author": "William Freudenberger",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/wischli/kilt-circuit-testing/issues"
+    },
+    "homepage": "https://github.com/wischli/kilt-circuit-testing#readme",
+    "dependencies": {
+        "circom": "0.0.34",
+        "circomlib": "0.0.19",
+        "fs": "0.0.1-security",
+        "mocha": "^6.2.2"
+    },
+    "directories": {
+        "test": "node_modules/circomlib/test"
+    },
+    "scripts": {
+        "test": "mocha --max-old-space-size=4000"
+    }
 }
