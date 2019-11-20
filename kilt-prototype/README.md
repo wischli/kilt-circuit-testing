@@ -29,7 +29,9 @@ The goal was to see whether file sizes and execution times for a minified versio
 
 ### What has been tested?
 
-- 2 supported proving methods (`groth` and `orginal`) that can be set in `config` inside `benchmark.js``
+I used the [`smtverifier.circom`](https://github.com/iden3/circomlib/blob/master/circuits/smt/smtverifier.circom) circuit from iden3's circuit library [circomlib](https://github.com/iden3/circomlib) to make an inclusion proof of a single leaf data. 
+
+- 2 supported proving methods (`groth` and `orginal`) that can be set in `config` inside `benchmark.js`
 - 3 supported SMT levels (5, 10 and 15)
 - files for proof, verification, public, etc. of zkSNARK are located in`kilt-prototype/*method_files` directories
 
@@ -41,7 +43,7 @@ Execute `benchmark.js` inside`kilt-prototype` directory. To make changes to the 
 
 If you chose to benchmark another number of levels, you need to to generate a circuit for this beforehand. 
 
-1. Install circom globally: `npm install -g circom``
+1. Install circom globally: `npm install -g circom`
 2. Create a copy of `smtverifier*.circom`, adjust number of levels in last line `component main = SMTVerifier(nLevels)`
-3. Compile circuit: `circom smtverifierX.circom -o circuitX.json``
+3. Compile circuit: `circom smtverifierX.circom -o circuitX.json`
 4. Change `config.smtLevels` to `X` in `benchmark.js`
