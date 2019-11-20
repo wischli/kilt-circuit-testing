@@ -5,6 +5,25 @@ This is a testing repository to come up with a circuit for a minified KILT crede
 
 In summary, two different "membership inclusion" proving methods were tested on a Macbook Pro 2018 (2,6 GHz 6-Core Intel Core i7, 16GB RAM) for three different numbers of SMT levels (5, 10, 15). The biggest files were `circuit15.json` and `original15>proof.json` with about 22mb each. These should stay on the Claimer's local machine and not be used on-chain. On the other hand, files needed for on-chain use/distribution were fairly small: `public.json` (<1kb), `verification_key.json` (~4-5kb) and `proof.json` (~1-2kb).
 
+#### Original Method
+
+|               | 5 levels                                     | 10 levels         | 15 levels          |
+| ------------- | -------------------------------------------- | ----------------- | ------------------ |
+| Circuit       | 65ms / 9.5mb (circuit.json)                  | 100ms / 16mb      | 146ms / 22mb       |
+| Trusted Setup | 86s / 9.5mb (proving_key.json)               | 131s / 15mb       | 170s / 21mb        |
+| Proof         | 50s / 1.5kb (proof.json), 273B (public.json) | 92s / 1.5kb, 295B | 120s / 1.5kb, 313B |
+| Validation    | 3s / 4.46kb (verification_key.json)          | 3s / 4.8kb        | 3s / 5.6kb         |
+
+#### Groth Method
+
+|               | 5 levels                                    | 10 levels         | 15 levels         |
+| ------------- | ------------------------------------------- | ----------------- | ----------------- |
+| Circuit       | 65ms / 9.5mb (circuit.json)                 | 100ms / 16mb      | 146ms / 22mb      |
+| Witness       | 252ms / 173kb (witness.json)                | 310ms / 291kb     | 400ms / 409kb     |
+| Trusted Setup | 54s / 8.1mb (proving_key.json)              | 81s / 13mb        | 100s / 18mb       |
+| Proof         | 36s / <1kb (proof.json), 273B (public.json) | 65s / 1.7kb, 295B | 82s / 1.7kb, 300B |
+| Validation    | 0.7s / 4.1kb (verification_key.json)        | 0.7s / 4.5kb      | 0.8s / 5.7kb      |
+
 See [kilt-prototype/README.md](https://github.com/KILTprotocol/zksnark-circuit-testing/tree/master/kilt-prototype) for more details. 
 
 ## Todos

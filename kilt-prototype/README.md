@@ -10,22 +10,22 @@ The goal was to see whether file sizes and execution times for a minified versio
 
 #### Original Method
 
-|               | 5 levels | 10 levels                              | 15 levels |
-| ------------- | -------- | -------------------------------------- | --------- |
-| Circuit       | 65ms     | 9.5mb (circuit.json)                   | 100ms     | 16mb        | 146ms | 22mb        |
-| Trusted Setup | 86s      | 9.5mb (proving_key.json)               | 131s      | 15mb        | 170s  | 21mb        |
-| Proof         | 50s      | 1.5kb (proof.json), 273B (public.json) | 92s       | 1.5kb, 295B | 120s  | 1.5kb, 313B |
-| Validation    | 3s       | 4.46kb (verification_key.json)         | 3s        | 4.8kb       | 3s    | 5.6kb       |
+|               | 5 levels                                     | 10 levels         | 15 levels          |
+| ------------- | -------------------------------------------- | ----------------- | ------------------ |
+| Circuit       | 65ms / 9.5mb (circuit.json)                  | 100ms / 16mb      | 146ms / 22mb       |
+| Trusted Setup | 86s / 9.5mb (proving_key.json)               | 131s / 15mb       | 170s / 21mb        |
+| Proof         | 50s / 1.5kb (proof.json), 273B (public.json) | 92s / 1.5kb, 295B | 120s / 1.5kb, 313B |
+| Validation    | 3s / 4.46kb (verification_key.json)          | 3s / 4.8kb        | 3s / 5.6kb         |
 
 #### Groth Method
 
-|               | 5 levels | 10 levels                             | 15 levels |
-| ------------- | -------- | ------------------------------------- | --------- |
-| Circuit       | 65ms     | 9.5mb (circuit.json)                  | 100ms     | 16mb        | 146ms | 22mb        |
-| Witness       | 252ms    | 173kb (witness.json)                  | 310ms     | 291kb       | 400ms | 409kb       |
-| Trusted Setup | 54s      | 8.1mb (proving_key.json)              | 81s       | 13mb        | 100s  | 18mb        |
-| Proof         | 36s      | <1kb (proof.json), 273B (public.json) | 65s       | 1.7kb, 295B | 82s   | 1.7kb, 300B |
-| Validation    | 0.7s     | 4.1kb (verification_key.json)         | 0.7s      | 4.5kb       | 0.8s  | 5.7kb       |
+|               | 5 levels                                    | 10 levels         | 15 levels         |
+| ------------- | ------------------------------------------- | ----------------- | ----------------- |
+| Circuit       | 65ms / 9.5mb (circuit.json)                 | 100ms / 16mb      | 146ms / 22mb      |
+| Witness       | 252ms / 173kb (witness.json)                | 310ms / 291kb     | 400ms / 409kb     |
+| Trusted Setup | 54s / 8.1mb (proving_key.json)              | 81s / 13mb        | 100s / 18mb       |
+| Proof         | 36s / <1kb (proof.json), 273B (public.json) | 65s / 1.7kb, 295B | 82s / 1.7kb, 300B |
+| Validation    | 0.7s / 4.1kb (verification_key.json)        | 0.7s / 4.5kb      | 0.8s / 5.7kb      |
 
 ### What has been tested?
 
