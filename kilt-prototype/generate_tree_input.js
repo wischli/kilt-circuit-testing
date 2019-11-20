@@ -1,6 +1,7 @@
 const smt = require('circomlib/src/smt')
 const bigInt = require('snarkjs').bigInt
 const fs = require('fs')
+const { stringifyBigInts } = require('snarkjs/src/stringifybigint.js')
 
 // leaf array from minified input
 const leafArr = [
@@ -24,14 +25,20 @@ const constructTree = async leafArr => {
     return tree
 }
 
-const treeWitness = async (witnessKey = leafArr.length - 1) => {
+const witnessInput = async (
+    nLevels = leafArr.length,
+    witnessIndex = leafArr.length - 1
+) => {
     const tree = await constructTree(leafArr)
     const fnc = 0
     const oldValue = 0
     const oldKey = 0
     const enabled = 1
-    const { siblings, foundValue: value, isOld0 } = await tree.find(witnessKey)
-    while (siblings.length < 5) {
+    const { siblings, foundValue: value, isOld0 } = await tree.find(
+        witnessIndex
+    )
+    console.log(nLevels, witnessIndex, siblings.length)
+    while (siblings.length < nLevels) {
         siblings.push(bigInt(0))
     }
     return {
@@ -42,26 +49,31 @@ const treeWitness = async (witnessKey = leafArr.length - 1) => {
         isOld0,
         value,
         fnc,
-        key: witnessKey,
+        key: witnessIndex,
         root: tree.root,
     }
 }
 
 const main = async () => {
     // construct input
-    const inputs = treeWitness()
+    const inputs = witnessInput()
 
-    // write as input
     fs.writeFileSync(
-        './input.json',
-        JSON.stringify(inputs, (_, v) =>
-            typeof v === 'bigint' ? v.toString() : v
-        ),
-        'utf-8'
+        'input.json',
+        JSON.stringify(stringifyBigInts(inputs), 'utf-8')
     )
+
+    // // write as input
+    // fs.writeFileSync(
+    //     './input.json',
+    //     JSON.stringify(inputs, (_, v) =>
+    //         typeof v === 'bigint' ? v.toString() : v
+    //     ),
+    //     'utf-8'
+    // )
     console.log('Created input.json')
 }
 
 main()
 
-module.exports.treeWitness = treeWitness
+module.exports.witnessInput = witnessInput

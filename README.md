@@ -1,9 +1,15 @@
 # kilt-circuit-testing
-This is a testing repository to come up with a circuit for a minified KILT credential to test the file sized of keys, proof etc.. As Merkle trees look promising, we will start with such. Ideally, we can come up with a `circom` file. Later, we will extend to circuit to more input.
+This is a testing repository to come up with a circuit for a minified KILT credential to test the file sized of keys, proof etc. As Merkle trees look promising, we will start with such. Ideally, we can come up with a `circom` file. Later, we will extend to circuit to more input.
+
+## kilt-prototype using iden3
+
+In summary, two different "membership inclusion" proving methods were tested on a Macbook Pro 2018 (2,6 GHz 6-Core Intel Core i7, 16GB RAM) for three different numbers of SMT levels (5, 10, 15). The biggest files were `circuit15.json` and `original15>proof.json` with about 22mb each. These should stay on the Claimer's local machine and not be used on-chain. On the other hand, files needed for on-chain use/distribution were fairly small: `public.json` (<1kb), `verification_key.json` (~4-5kb) and `proof.json` (~1-2kb).
+
+See [kilt-prototype/README.md](https://github.com/KILTprotocol/zksnark-circuit-testing/tree/master/kilt-prototype) for more details. 
 
 ## Todos
-- [ ] Create a Merkle tree circuit for `input.json` (if not possible, create one for even less input)
-- [ ] Check filesizes for keys, proof, verification
+- [x] Create a Merkle tree circuit for `input.json` (if not possible, create one for even less input)
+- [x] Check filesizes for keys, proof, verification
 - [ ] Check differences between hashing all input values vs. not all
 - [ ] Extend circuit for more attribute inputs and compare file sizes
 
