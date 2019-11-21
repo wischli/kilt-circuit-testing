@@ -2,9 +2,11 @@
 
 The goal was to see whether file sizes and execution times for a minified version of an attestedClaim instance were viable using iden3. 
 
-**As of now, I don't see any objections,** as the biggest file size was `proving_key.json` (using 15 levels) with 21mb. This file would probably stay on your machine. The corresponding `proof.json` was below 2kb, `public.json` 300 bytes and `verification_key.json` 5.6kb.
+**As of now, I don't see any objections concerning file sizes,** as the biggest was `proving_key.json` (using 15 levels) with 21mb. This file would probably stay on your machine. The corresponding `proof.json` was below 2kb, `public.json` 300 bytes and `verification_key.json` 5.6kb.
 
-**However**, note that the used proof is a much simplified version of what we would most likely need. We simply made an SMT-inclusion proof of one datapoint. For us, we would need to add circuits for our private inputs. For instance, we might have to proof one of our leaves is the hash of two numbers x and y and so on.
+On the other hand, **proof-building times are more concerning**, varying between 36s (Groth 5L) and 120s (Original 15L). The trusted setup would need to be run for every different circuit once. Ideally, this should be done in a multi-party computation (MPC) to ensure the toxic waste has been destroyed. But this is something we should deal later with.
+
+Note that the **used proof is a much simplified version** of what we would most likely need. We simply made an SMT-inclusion proof of one datapoint. For us, we would need to add circuits for our private inputs. For instance, we might have to proof one of our leaves is the hash of two numbers x and y and so on.
 
 ### Benchmark
 

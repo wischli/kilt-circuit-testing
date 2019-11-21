@@ -3,7 +3,7 @@ This is a testing repository to come up with a circuit for a minified KILT crede
 
 ## kilt-prototype using iden3
 
-In summary, two different "membership inclusion" proving methods were tested on a Macbook Pro 2018 (2,6 GHz 6-Core Intel Core i7, 16GB RAM) for three different numbers of SMT levels (5, 10, 15). The biggest files were `circuit15.json` and `original15>proof.json` with about 22mb each. These should stay on the Claimer's local machine and not be used on-chain. On the other hand, files needed for on-chain use/distribution were fairly small: `public.json` (<1kb), `verification_key.json` (~4-5kb) and `proof.json` (~1-2kb).
+In summary, two different "membership inclusion" proving methods were tested on a Macbook Pro 2018 (2,6 GHz CPU, 16GB RAM) for three different numbers of SMT levels (5, 10, 15). The biggest files were `circuit15.json` and `original15>proof.json` with about 22mb each. These should stay on the Claimer's local machine and not be used on-chain. On the other hand, files needed for on-chain use/distribution were fairly small: `public.json` (<1kb), `verification_key.json` (~4-5kb) and `proof.json` (~1-2kb). The proof building execution times varied between 36s (Groth 5L) and 120s (Original 15L). The trusted setup took even longer (between 50-170s) but this would only need to be done once for every different circuit we come up with (and ideally be done in an MPC).
 
 #### Original Method
 
