@@ -17,7 +17,7 @@
         "circom": "0.0.34",
         "circomlib": "0.0.19",
         "fs": "0.0.1-security",
-        "mocha": "^6.2.2"
+        "mocha": "^10.2.0"
     },
     "directories": {
         "test": "node_modules/circomlib/test"
